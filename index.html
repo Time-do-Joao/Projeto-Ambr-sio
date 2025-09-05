@@ -1,50 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Escola Ambrósio Bini</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Escola Ambrósio Bini</h1>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Escola Ambrósio Bini</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#diretores">Diretores</a></li>
+          <li><a href="#quadra">Quadra</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#laboratorios">Laboratórios</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Somos uma escola dedicada à formação de cidadãos conscientes, criativos e preparados para o futuro.</p>
-  </section>
+  <main class="container">
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma escola dedicada à formação de cidadãos conscientes, criativos e preparados para o futuro.</p>
+    </section>
 
-  <section id="cursos">
-    <h2>Nossos Cursos</h2>
-    <ul>
-      <li>Educação Infantil</li>
-      <li>Ensino Fundamental</li>
-      <li>Atividades Extracurriculares</li>
-    </ul>
-  </section>
+    <section id="cursos">
+      <h2>Nossos Cursos</h2>
+      <ul>
+        <li>Educação Infantil</li>
+        <li>Ensino Fundamental</li>
+        <li>Atividades Extracurriculares</li>
+      </ul>
+    </section>
 
-  <section id="contato">
-    <h2>Fale Conosco</h2>
-    <form id="formulario">
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p id="mensagem"></p>
-  </section>
+    <section id="diretores">
+      <h2>Nossos Diretores</h2>
+      <div class="diretores-container">
+        <article class="diretor-card">
+          <img src="diretor1.jpg" alt="Foto do Diretor João Silva" />
+          <h3>João Silva</h3>
+          <p>Diretor Geral</p>
+        </article>
+        <article class="diretor-card">
+          <img src="diretor2.jpg" alt="Foto da Diretora Maria Souza" />
+          <h3>Maria Souza</h3>
+          <p>Diretora Pedagógica</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="quadra">
+      <h2>Nossa Quadra</h2>
+      <img src="quadra.jpg" alt="Imagem da quadra esportiva da escola" class="full-width-img" />
+    </section>
+
+    <section id="localizacao">
+      <h2>Localização da Escola</h2>
+      <div class="mapa-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.2501433078597!2d-46.63330958444145!3d-23.550519184686215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2d9e53d43%3A0x420e1d9e0b90ee11!2sEscola%20Ambr%C3%B3sio%20Bini!5e0!3m2!1spt-BR!2sbr!4v1693933689111!5m2!1spt-BR!2sbr" 
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa da localização da Escola Ambrósio Bini"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Vídeo da Escola</h2>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/SeuVideoID" 
+          title="Vídeo institucional da Escola Ambrósio Bini" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="laboratorios">
+      <h2>Laboratórios</h2>
+      <div class="laboratorios-container">
+        <article class="lab-card">
+          <h3>Laboratório de Ciências</h3>
+          <p>Equipado com materiais para experimentos práticos e aulas dinâmicas.</p>
+        </article>
+        <article class="lab-card">
+          <h3>Laboratório de Informática</h3>
+          <p>Computadores modernos para desenvolvimento de habilidades digitais.</p>
+        </article>
+        <article class="lab-card">
+          <h3>Laboratório de Robótica</h3>
+          <p>Espaço para a criação e programação de projetos tecnológicos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <form id="formulario">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="mensagem" aria-live="polite"></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Escola Brilho do Saber</p>
+    <div class="container">
+      <p>&copy; 2025 Escola Ambrósio Bini</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

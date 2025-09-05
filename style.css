@@ -1,74 +1,229 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fff8dc;
-    color: #333;
-  }
-  
-  header {
-    background-color: #ffcc00;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    color: #333;
-  }
-  
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #1d53b7;
+  color: #fff;
+  padding: 1.5rem 0 2.5rem 0; /* padding bottom maior para espaçamento */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffcc00;
+  outline: none;
+}
+
+main {
+  padding: 3rem 0;
+}
+
+section {
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.05);
+}
+
+section h2 {
+  color: #1d53b7;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #ffcc00;
+  padding-bottom: 0.5rem;
+  max-width: max-content;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 450px;
+}
+
+input, textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  border-color: #1d53b7;
+  outline: none;
+}
+
+button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: #e6b800;
+  outline: none;
+  color: #222;
+}
+
+#mensagem {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: green;
+  min-height: 24px;
+}
+
+/* Containers e cards */
+
+.diretores-container,
+.laboratorios-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.diretor-card,
+.lab-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.diretor-card:hover,
+.lab-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
+}
+
+.diretor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #1d53b7;
+}
+
+.full-width-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.mapa-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  margin-top: 1rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  margin-top: 1rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 1rem;
   }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 40px 20px;
-  }
-  
-  section h2 {
-    color: #ffcc00;
-  }
-  
-  form {
-    display: flex;
+
+  .diretores-container,
+  .laboratorios-container {
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
+    align-items: center;
   }
-  
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
   }
-  
-  button {
-    background-color: #ffcc00;
-    border: none;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #e6b800;
-  }
-  
-  footer {
-    background-color: #ffcc00;
-    text-align: center;
-    padding: 10px;
-    color: #333;
-  }
-  
+}
+
+#sobre {
+  margin-top: 2.5rem; /* ou ajuste o valor para o que preferir */
+}
+
+html {
+  scroll-behavior: smooth;
+}
